@@ -8,18 +8,33 @@
       margin: 0;
       background: #001f3f;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    #axxen {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100px;
+      color: rgba(255, 255, 255, 0.05);
+      letter-spacing: 20px;
+      z-index: 0;
+      user-select: none;
+    }
+    #element {
+      position: relative;
+      z-index: 1;
     }
     svg {
-      width: 300px;
+      width: 150px;
       height: auto;
+      position: absolute;
     }
   </style>
 </head>
 <body>
+  <div id="axxen">AXXEN</div>
   <div id="element"></div>
   <script src="the_coding_wizard.js"></script>
 </body>

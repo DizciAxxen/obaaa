@@ -1,17 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shark Animation</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Köpekbalığı ve Dalgalı Deniz</title>
+  <style>
+    /* Genel Ayarlar */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #87ceeb, #ffffff);
+      height: 100vh;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    /* Konteyner */
+    .container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Dalgalı Deniz */
+    .sea {
+      width: 100%;
+      height: 20vh; /* Deniz kısmı ekranın %20'sini kaplayacak */
+      background: #1e3a59;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      animation: wave 4s ease-in-out infinite;
+    }
+
+    /* Dalga Animasyonu */
+    @keyframes wave {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Dalgalı Deniz İçin Birkaç Katman */
+    .sea::before, .sea::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      top: 0;
+      left: 0;
+      animation: wave 2s ease-in-out infinite;
+    }
+
+    .sea::after {
+      animation-delay: 1s;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Köpekbalığı SVG'si */
+    .shark {
+      width: 60vw;
+      max-width: 400px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: -60vw;
+      transform: translateY(-50%);
+      z-index: 2; /* Köpekbalığını denizin üstünde tutar */
+      animation: swim 12s linear infinite;
+    }
+
+    /* Yüzme Animasyonu */
+    @keyframes swim {
+      0% {
+        left: -60vw;
+        transform: translateY(-50%) scaleX(1);
+      }
+      50% {
+        left: 50vw;
+        transform: translateY(-50%) scaleX(1);
+      }
+      51% {
+        transform: translateY(-50%) scaleX(-1);
+      }
+      100% {
+        left: -60vw;
+        transform: translateY(-50%) scaleX(-1);
+      }
+    }
+
+    /* Medya Sorguları */
+    @media (max-width: 768px) {
+      .shark {
+        width: 80vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shark {
+        width: 90vw;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1 class="axxen-text">AXXEN</h1>
-    <img src="shark.png" class="shark" />
+    <!-- Köpekbalığı SVG'si -->
+    <svg class="shark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveaspectratio="xMidYMid meet">
+      <path d="M60 50 Q50 30, 40 50 T20 50 Q10 70, 30 70 Q50 80, 60 50" fill="none" stroke="black" stroke-width="2"/>
+    </svg>
+
+    <!-- Dalgalı Deniz -->
+    <div class="sea"></div>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>

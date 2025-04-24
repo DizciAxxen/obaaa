@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Köpekbalığı ve Dalgalı Deniz</title>
+  <title>Köpekbalığı ve Dalgalı Deniz - Axxen</title>
   <style>
     * {
       box-sizing: border-box;
@@ -15,7 +15,7 @@
       background: linear-gradient(to bottom, #87ceeb, #ffffff);
       height: 100vh;
       overflow: hidden;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     .container {
@@ -25,6 +25,20 @@
       overflow: hidden;
     }
 
+    /* Axxen Yazısı */
+    .brand {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1e3a59;
+      z-index: 3;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Dalgalı Deniz */
     .sea {
       width: 100%;
       height: 20vh;
@@ -60,6 +74,7 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
+    /* Köpekbalığı */
     .shark {
       width: 60vw;
       max-width: 400px;
@@ -94,20 +109,34 @@
       .shark {
         width: 80vw;
       }
+
+      .brand {
+        font-size: 1.6rem;
+      }
     }
 
     @media (max-width: 480px) {
       .shark {
         width: 90vw;
       }
+
+      .brand {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Axxen Yazısı -->
+    <div class="brand">Axxen</div>
+
+    <!-- Köpekbalığı SVG -->
     <svg class="shark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
       <path d="M60 50 Q50 30, 40 50 T20 50 Q10 70, 30 70 Q50 80, 60 50" fill="none" stroke="black" stroke-width="2"/>
     </svg>
+
+    <!-- Dalgalı Deniz -->
     <div class="sea"></div>
   </div>
 </body>

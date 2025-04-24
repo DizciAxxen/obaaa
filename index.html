@@ -63,23 +63,10 @@
       height: auto;
       position: fixed;
       top: 40%;
-      left: -300px;
-      transform: translateY(-50%);
+      left: 40%;
+      transform: translate(-50%, -50%);
       z-index: 2;
-      animation: swim 12s linear infinite;
-    }
-
-    @keyframes swim {
-      0% {
-        left: -300px;
-      }
-      50% {
-        left: 50%;
-        transform: translateX(-50%) translateY(0);
-      }
-      100% {
-        left: 100%;
-      }
+      pointer-events: none;
     }
 
     .splash {
@@ -91,21 +78,8 @@
       height: 100px;
       background: url('https://www.pngall.com/wp-content/uploads/2016/04/Water-Splash-PNG.png') no-repeat center center;
       background-size: contain;
-      animation: splashAnimation 10s linear infinite;
-    }
-
-    @keyframes splashAnimation {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-        transform: translateY(-10px);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
+      opacity: 0;
+      z-index: 4;
     }
   </style>
 </head>
@@ -113,8 +87,30 @@
   <div class="container">
     <div class="brand">Axxen</div>
     <div class="wave"></div>
-    <div class="shark" style="background-image: url('https://www.pngkey.com/png/full/92-929399_shark-animated-png.png');"></div>
+    <img src="https://www.pngkey.com/png/full/92-929399_shark-animated-png.png" class="shark" alt="Köpekbalığı" />
     <div class="splash"></div>
   </div>
+
+  <script>
+    // Shark moves with mouse
+    const shark = document.querySelector('.shark');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      shark.style.left = `${x}px`;
+      shark.style.top = `${y}px`;
+    });
+
+    // Splash effect every 10 seconds
+    const splash = document.querySelector('.splash');
+    setInterval(() => {
+      splash.style.opacity = 1;
+      splash.style.animation = 'splashAnimation 1s ease';
+      setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.animation = '';
+      }, 1000);
+    }, 10000);
+  </script>
 </body>
 </html>

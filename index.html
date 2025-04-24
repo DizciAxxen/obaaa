@@ -1,8 +1,3 @@
-Tabii! İşte **köpekbalığı görselini base64 formatında** HTML içine gömme için gerekli olan kod:
-
-### Yeni **index.html** kodu:
-
-```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -48,7 +43,7 @@ Tabii! İşte **köpekbalığı görselini base64 formatında** HTML içine göm
       bottom: 0;
       width: 200%;
       height: 20vh;
-      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDYwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgNTAgQzE1MCA3NSAzNTAgMjUgNjAwIDUwIEM2MDAgMTAwIDAgMTAwIDAgNTBaIiBmaWxsPSIjMWUzYTU5IiAvPjwvc3ZnPg==') repeat-x;
+      background: url('https://www.pngall.com/wp-content/uploads/2016/04/Waves-PNG-Image-File.png') repeat-x;
       background-size: contain;
       animation: waveAnimation 4s linear infinite;
       z-index: 1;
@@ -72,4 +67,54 @@ Tabii! İşte **köpekbalığı görselini base64 formatında** HTML içine göm
       transform: translateY(-50%);
       z-index: 2;
       animation: swim 12s linear infinite;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABQ0lEQVR4nO3XwQnCMBCA4VdR0P//rV2GkQkq8nJkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2ZkZ2
+    }
+
+    @keyframes swim {
+      0% {
+        left: -300px;
+      }
+      50% {
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    .splash {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background: url('https://www.pngall.com/wp-content/uploads/2016/04/Water-Splash-PNG.png') no-repeat center center;
+      background-size: contain;
+      animation: splashAnimation 10s linear infinite;
+    }
+
+    @keyframes splashAnimation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">Axxen</div>
+    <div class="wave"></div>
+    <div class="shark" style="background-image: url('https://www.pngkey.com/png/full/92-929399_shark-animated-png.png');"></div>
+    <div class="splash"></div>
+  </div>
+</body>
+</html>
